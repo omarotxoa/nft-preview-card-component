@@ -47,26 +47,23 @@ hr {
 }
 
 /* Images */
-div img {
-    margin-inline-end: 0;
-    border-radius: .5em;
-}
-
 img {
     max-width: 100%;
     vertical-align: middle;
     margin-inline-end: .25em;
 }
 
-.avatar {
-    border: 1px solid white;
-    border-radius: 50%;
-    margin-inline-end: 1em;
-    height: 2em;
-}
-
 div {
     position: relative;
+}
+
+div img {
+    margin-inline-end: 0; 
+}
+
+div img,
+div:hover::before {
+    border-radius: .5em;
 }
 
 div:hover::before {
@@ -77,8 +74,22 @@ div:hover::before {
     top: 0;
     background-color: var(--cyan-opaque);
     height: 100%;
-    width: 100%; 
+    width: 50%;
+    opacity: 0; 
     cursor: pointer;
+    animation: imghover 500ms forwards;
+}
+
+@keyframes imghover {
+    from {opacity: 0; width: 50%;}
+    to {opacity: 1; width: 100%;}
+}
+
+.avatar {
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-inline-end: 1em;
+    height: 2em;
 }
 
 /* Typography */
@@ -90,6 +101,7 @@ a {
 a:hover,
 a:focus {
     color: var(--cyan);
+    transition: color 1s ease;
 }
 
 main p {
