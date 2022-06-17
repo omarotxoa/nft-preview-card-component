@@ -46,7 +46,7 @@ hr {
 }
 
 /* Images */
-main > img {
+div img {
     margin-inline-end: 0;
     border-radius: .5em;
 }
