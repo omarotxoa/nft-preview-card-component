@@ -3,6 +3,7 @@
 :root {
 --soft-blue: hsl(215, 51%, 70%);
 --cyan: hsl(178, 100%, 50%);
+--cyan-opaque: hsla(178, 100%, 50%, 0.75);
 --body-bg: hsl(217, 54%, 11%);
 --card-bg: hsl(216, 50%, 16%);
 --line-clr: hsl(215, 32%, 27%);
@@ -18,8 +19,10 @@ body {
     background-color: var(--body-bg);
     font-family: 'Outfit', sans-serif;
     color: var(--soft-blue);
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
     margin: 0;
     padding: 1em;
@@ -61,6 +64,22 @@ img {
     height: 2em;
 }
 
+div {
+    position: relative;
+}
+
+div:hover::before {
+    content: url(images/icon-view.svg);
+    position: absolute;
+    display: grid;
+    place-items: center;
+    top: 0;
+    background-color: var(--cyan-opaque);
+    height: 100%;
+    width: 100%; 
+    cursor: pointer;
+}
+
 /* Typography */
 a {
     color: white;
@@ -89,4 +108,8 @@ h3 {
 
 time {
     font-weight: var(--fw-medium);
+}
+
+footer {
+    text-align: center;
 }
