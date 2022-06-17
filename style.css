@@ -62,6 +62,16 @@ img {
 }
 
 /* Typography */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--cyan);
+}
+
 main p {
     font-size: 1.1rem;
     line-height: 1.5em;
@@ -73,7 +83,6 @@ section p {
 }
 
 h3 {
-    color: white;
     font-weight: var(--fw-bold);
     font-size: 1.5rem;
 }
