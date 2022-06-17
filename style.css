@@ -14,10 +14,26 @@ body {
     background-color: var(--body-bg);
     font-family: 'Outfit', sans-serif;
     color: var(--soft-blue);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 main {
     background-color: var(--card-bg);
+    max-width: 20em;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
 }
 
 h3 {
