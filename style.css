@@ -91,7 +91,7 @@ div:hover::before {
     to {opacity: 1; width: 100%;}
 }
 
-.avatar {
+main p:last-child img {
     border: 1px solid white;
     border-radius: 50%;
     margin-inline-end: 1em;
