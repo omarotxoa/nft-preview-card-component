@@ -36,8 +36,21 @@ main {
     box-shadow: 0px 1.8em .7em 3em rgba(0,0,0,.03), 0px 2em 0 1em rgba(0,0,0,.075);
 }
 
+main, footer, div:hover::before {
+    opacity: 0;
+}
+
+main, footer {
+    animation: fadein 2s forwards;
+}
+
 main > * + * {
     margin-block-end: 1em;
+}
+
+footer {
+    text-align: center;
+    animation-delay: 1s;
 }
 
 section {
@@ -81,14 +94,8 @@ div:hover::before {
     background-color: var(--cyan-opaque);
     height: 100%;
     width: 50%;
-    opacity: 0; 
     cursor: pointer;
     animation: imghover 500ms forwards;
-}
-
-@keyframes imghover {
-    from {opacity: 0; width: 50%;}
-    to {opacity: 1; width: 100%;}
 }
 
 main p:last-child img {
@@ -134,6 +141,14 @@ time {
     font-weight: var(--fw-medium);
 }
 
-footer {
-    text-align: center;
+/* Keyframe animations */
+
+@keyframes imghover {
+    from {opacity: 0; width: 50%;}
+    to {opacity: 1; width: 100%;}
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
